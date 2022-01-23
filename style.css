@@ -74,39 +74,41 @@ body {
 }
 
 .container {
-  margin: 5rem auto;
+  margin: 0 auto;
   width: min(90%, 70.5rem);
-  height: 100vh;
+  height: 120vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  gap: 2rem;
 }
 
 .content h1 {
   font-size: 1.8rem;
-  margin-top: 10rem;
 }
 
 .content p {
-  margin: 2rem 0;
 }
 
 section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex: 1;
 }
 
 .content {
-  flex: 60%;
+  flex: 1;
+  gap: 1.6rem;
 }
 
-section:nth-child(1) {
-  flex: 40%;
+.second {
+  flex: 2;
+  justify-content: flex-start;
+  gap: 1.6rem;
 }
+
 p {
   color: var(--grayish-blue);
 }
@@ -129,13 +131,13 @@ p {
   background-color: white;
   border-radius: 0.5rem;
   box-shadow: 0px 9px 0px rgba(0, 0, 0, 0.18);
-  margin: 2rem 0 4rem 0;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  height: 50vh;
+  gap: 1.6rem;
 }
 
 form input {
@@ -155,9 +157,10 @@ form button {
 
 .disclamer {
   color: hsl(246, 25%, 78%);
-  margin: 1rem auto;
   width: 90%;
   font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 1rem;
 }
 
 .disclamer a {
@@ -172,20 +175,23 @@ form button {
   }
   .container {
     flex-direction: row;
-    margin: 0 auto;
+    height: 100vh;
+    gap: 2rem;
+  }
+  .content {
+    flex: 1;
+    text-align: left;
+    font-size: 1.2rem;
   }
 
-  .content {
-    text-align: left;
-  }
   .content h1 {
-    margin: 0;
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
-  .content p {
-    font-size: 1.1rem;
+
+  .second {
+    flex: 1;
   }
   form {
-    min-width: 33em;
+    height: 100%;
   }
 }
