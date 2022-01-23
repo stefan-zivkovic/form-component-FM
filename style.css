@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  /*Primary*/
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  /*Accent*/
+  --blue: hsl(248, 32%, 49%);
+  /*Neutral*/
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 90%);
+}
+
+/*CSS reset*/
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+pre,
+blockquote,
+figure,
+hr {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+textarea,
+select,
+button {
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  border: 0;
+}
+
+embed,
+iframe,
+img,
+object,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  background: var(--red) url("./images/bg-intro-mobile.png") no-repeat;
+  background-size: cover;
+}
+
+.container {
+  margin: 5rem auto;
+  width: min(90%, 70.5rem);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+}
+
+.content h1 {
+  font-size: 1.8rem;
+  margin-top: 10rem;
+}
+
+.content p {
+  margin: 2rem 0;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content {
+  flex: 60%;
+}
+
+section:nth-child(1) {
+  flex: 40%;
+}
+p {
+  color: var(--grayish-blue);
+}
+
+.msg {
+  background-color: var(--blue);
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 0.5rem;
+  box-shadow: 0px 9px 0px rgba(0, 0, 0, 0.18);
+}
+
+.msg span {
+  font-weight: 600;
+}
+
+.card {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0px 9px 0px rgba(0, 0, 0, 0.18);
+  margin: 2rem 0 4rem 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+form input {
+  padding: 1rem 2rem;
+  border: 0.1rem solid var(--grayish-blue);
+  font-weight: 600;
+  color: black;
+}
+
+form button {
+  padding: 1rem 2rem;
+  background-color: var(--green);
+  border-radius: 0.3rem;
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+}
+
+.disclamer {
+  color: hsl(246, 25%, 78%);
+  margin: 1rem auto;
+  width: 90%;
+  font-size: 0.9rem;
+}
+
+.disclamer a {
+  color: var(--red);
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 64.063em) {
+  body {
+    background: var(--red) url("./images/bg-intro-desktop.png") no-repeat;
+    background-size: cover;
+  }
+  .container {
+    flex-direction: row;
+    margin: 0 auto;
+  }
+
+  .content {
+    text-align: left;
+  }
+  .content h1 {
+    margin: 0;
+    font-size: 3.5rem;
+  }
+  .content p {
+    font-size: 1.1rem;
+  }
+  form {
+    min-width: 33em;
+  }
+}
